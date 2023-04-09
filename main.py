@@ -1,6 +1,11 @@
 """Python file to serve as the frontend"""
 import streamlit as st
 from streamlit_chat import message
+
+# From here down is all the StreamLit UI.
+st.set_page_config(page_title="FLAN-T5 XXL Model", page_icon=":robot:")
+st.header("FLAN-T5 XXL Model")
+
 from langchain.chains import ConversationChain
 from langchain.llms import HuggingFaceHub
 
@@ -21,9 +26,7 @@ def load_chain():
 
 qa = load_chain()
 
-# From here down is all the StreamLit UI.
-st.set_page_config(page_title="FLAN-T5 XXL Model", page_icon=":robot:")
-st.header("FLAN-T5 XXL Model")
+
 
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
