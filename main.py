@@ -5,7 +5,7 @@ from langchain.chains import ConversationChain
 from langchain.llms import HuggingFaceHub
 
 import os
-#os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = HUGGINGFACEHUB_API_TOKEN
 flan_t5 = HuggingFaceHub(
     repo_id="google/flan-t5-xxl",
     model_kwargs={"temperature":0.1,
