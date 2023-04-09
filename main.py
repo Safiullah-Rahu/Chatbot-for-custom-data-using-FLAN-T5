@@ -16,7 +16,7 @@ flan_t5 = HuggingFaceHub(
     model_kwargs={"temperature":0.1,
                  "max_new_tokens":256,
                  "min_tokens":200},
-    huggingfacehub_api_token=os.environ["HUGGINGFACEHUB_API_TOKEN"]
+    huggingfacehub_api_token=st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 )
 
 
